@@ -21,11 +21,17 @@ from django.conf.urls.static import static
 #import the settings file here
 from django.conf import settings
 
+#import blog views and portfolio views
+from portfolio import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),   
+    path('admin/', admin.site.urls), 
+    path('', views.home, name = 'home'),
+      
 ]
 #can look up django media images, takes the url where the admin would add images
 #goes into the media root directory where the image is currently stored
 urlpatterns+= static(settings.MEDIA_URL, document_root =  settings.MEDIA_ROOT)
+
+
