@@ -15,7 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#add functionality from the django project
+from django.conf.urls.static import static
+
+#import the settings file here
+from django.conf import settings
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),   
 ]
+#can look up django media images, takes the url where the admin would add images
+#goes into the media root directory where the image is currently stored
+urlpatterns+= static(settings.MEDIA_URL, document_root =  settings.MEDIA_ROOT)

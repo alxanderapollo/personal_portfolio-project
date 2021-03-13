@@ -120,3 +120,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#we need a media url so we can see what images are uploaded whenever 
+#an admin adds any pictures into the media folder
+MEDIA_URL = '/media/'
+
+
+#this is for storing images in a specfic folder inside of the project main
+#inside settings this media varaible was created, to create folders in which
+#to properly store images
+#now whenever admin adds pictures it stores them in the base_directory called media, whcih is folder found in the project main
+MEDIA_ROOT = BASE_DIR / 'media'
