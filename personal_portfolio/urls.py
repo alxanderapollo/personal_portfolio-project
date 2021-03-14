@@ -15,20 +15,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+#adding a path so that we can access blog files
+from django.urls import include
+
 #add functionality from the django project
 from django.conf.urls.static import static
 
 #import the settings file here
 from django.conf import settings
 
-#import blog views and portfolio views
+#import portfolio views
 from portfolio import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls), 
     path('', views.home, name = 'home'),
-      
+    path('blog/', include('blog.urls')),
 ]
 #can look up django media images, takes the url where the admin would add images
 #goes into the media root directory where the image is currently stored

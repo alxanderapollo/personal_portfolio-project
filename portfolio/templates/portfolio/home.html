@@ -1,1 +1,17 @@
 <h1>Alex Portfolio!</h1>
+
+<!-- when we are writing logic, use only one pair of curly braces-->
+<!-- when are displaying objects two pairs of curly braces-->
+
+<!-- what this code is doing, its pulling all the objects with the name title, descript and image-->
+<!-- it is then printing the objects with those attributes in a for loop
+inside of the for loop, it says if one of the objects have a link go there  -->
+{% for project in projects%}
+<h2>{{project.title}}</h2>
+<p>{{project.description}}</p>
+<img src="{{project.image.url}}">
+{% if project.url %}
+<br><a href="{{project.url}}">link</a>
+{% endif%}
+
+{% endfor %}
