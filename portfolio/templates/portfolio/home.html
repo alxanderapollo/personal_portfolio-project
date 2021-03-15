@@ -1,4 +1,15 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<div class ="container text-center" >
 <h1>Alex Portfolio!</h1>
+
+<!--adding my picture as the main image here-->
+<!-- whenever adding a static image to django need to use load static to place the pic -->
+{% load static%} 
+<!-- Resume link-->
+<a href="{% static 'portfolio/alexsalazarNY_resume.pdf' %}">resume</a>
+<!--Profile Pic-->
+<img src="{% static 'portfolio/me.jpeg'%}"
+
 
 <!-- when we are writing logic, use only one pair of curly braces-->
 <!-- when are displaying objects two pairs of curly braces-->
@@ -13,5 +24,6 @@ inside of the for loop, it says if one of the objects have a link go there  -->
 {% if project.url %}
 <br><a href="{{project.url}}">link</a>
 {% endif%}
-
 {% endfor %}
+
+</div>
