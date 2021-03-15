@@ -1,2 +1,14 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<h1>Blog</h1>
+<div class ="container text-center">
+    <h1>Blog</h1>
+
+    {% for posts in post%}
+    <h2>{{posts.title}}</h2>
+    <p>{{posts.date}}</p>
+    <p>{{posts.description}}</p>
+
+    {% endfor %}
+
+
+
+</div>

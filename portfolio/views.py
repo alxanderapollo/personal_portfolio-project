@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from .models import Project #want to display all the content stored in the DATABASE  
+#want to display all the content stored in the DATABASE  
+#i need to import the project from the data base
+from .models import Project 
 
 # Create your views here.
 def home(request):
