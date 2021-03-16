@@ -5,7 +5,7 @@ class Post(models.Model):
     #max_length - the title of projects can never have a charater length more than a 100
     title = models.CharField(max_length=200)
     #description of each project has a max of 250 chars
-    date = models.DateField(auto_now=False, auto_now_add=True)
+    date = models.DateField()
     #clickable on the portfolio
     
     description = models.TextField()

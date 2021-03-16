@@ -2,10 +2,10 @@
 <div class ="container text-center">
     <h1>Blog</h1>
 
-    {% for posts in post%}
-    <h2>{{posts.title}}</h2>
-    <p>{{posts.date}}</p>
-    <p>{{posts.description}}</p>
+    {% for post in posts %}
+    <a href="{% url 'blog:detail' post.id %}"><h2>{{post.title}}</h2></a>
+    <p>{{post.date}}</p>
+    <p>{{post.description}}</p>
 
     {% endfor %}
 
