@@ -1,1 +1,6 @@
-{{post.title}}
+<h1>{{post.title}}</h1>
+
+<h2>--{{ post.date|date:'F jS Y' }}--</h2>
+
+<!--Display blog text, and now its safe to produce the html tags that were written into the post-->
+{{ post.description|safe}}

@@ -13,5 +13,9 @@ class Post(models.Model):
     url = models.URLField(blank=True) #blank in this case means its
     #not necssary to add an image with characters
     
+    #function to show the names of each blog that created for the admin
+    #returns the default name of the object created in admin when looking at a object
+    def __str__(self):
+        return self.title
 
     
